@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import GlobalStyled from "./global/styled";
-import { BaseCSS } from "styled-bootstrap-grid";
+import ThemeProvider from "./global/ThemeProvider";
 
 ReactDOM.render(
     <React.StrictMode>
-        <GlobalStyled />
-        <BaseCSS />
-        <App />
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
     </React.StrictMode>,
     document.getElementById("root"),
 );
